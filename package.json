@@ -39,7 +39,8 @@
 		"gulp-favicons": "^3.0.0",
 		"jquery": "^3.5.1",
 		"normalize.css": "^8.0.1",
-		"tinify": "^1.6.0-beta.2"
+		"tinify": "^1.6.0-beta.2",
+		"ymaps": "^0.2.1"
 	},
 	"scripts": {
 		"html": "gulp",
