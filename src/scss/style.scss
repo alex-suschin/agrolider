@@ -1010,7 +1010,7 @@ select {
     #hamburger-icon {
         display: block;
     }
-    .callback-mob {
+    .header .callback-mob {
         display: block;
     }
     .hamburger-box {
@@ -1082,5 +1082,197 @@ select {
     .slogan {
         max-width: 80%;
         padding: 25px;
+    }
+    .products-item__right {
+        padding: 0 0 0 30px;
+    }
+    .products-item:nth-child(even) .products-item__right {
+        padding: 0 0 0 30px;
+    }
+    .map-contacts {
+        padding: 35px;
+        max-width: 510px;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .copyright .container,
+    .copyright__right {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright__left {
+        margin-bottom: 22px;
+    }
+    .copyright__right a {
+        display: block;
+        width: fit-content;
+        margin: 0 0 22px 0;
+    }
+    .copyright .container {
+        padding-top: 27px;
+        padding-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .map-contacts {
+        position: static;
+        background: transparent;
+        padding: 0 16px 0 16px;
+        margin-bottom: 41px;
+        max-width: 100%;
+    }
+    .map {
+        position: static;
+        height: 286px;
+    }
+    .map-wrap {
+        height: auto;
+    }
+    .footer-box__top .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box__bottom .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .logo {
+        margin-bottom: 19px;
+        width: 128px;
+        height: 36px;
+    }
+    .footer .menu {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        li {
+            margin: 0 0 18px 0;
+        }
+    }
+    .footer-box__bottom .btn-callback {
+        margin-bottom: 33px;
+    }
+    .footer {
+        padding: 58px 0 0 0;
+    }
+    .footer-box {
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .products-item {
+        flex-direction: column;
+    }
+    .products-item:nth-child(even) {
+        flex-direction: column;
+    }
+    .products-item__left {
+        width: 100%;
+    }
+    .products-item__right {
+        width: 100%;
+        padding-left: 0;
+    }
+    .products-item:nth-child(even) .products-item__right {
+        padding: 0 0 0 0;
+    }
+    .products-item-img {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .products .title {
+        font-size: 25px;
+        line-height: 29px;
+        margin-bottom: 32px;
+    }
+    .products {
+        padding: 50px 0 20px 0;
+    }
+    .products-item-title {
+        font-size: 16px;
+        line-height: 100%;
+        margin-bottom: 24px;
+    }
+    .products-item ul li {
+        font-size: 14px;
+        line-height: 150%;
+    }
+    .products-item-title::before {
+        bottom: -12px;
+    }
+    .products-item ul {
+        margin-bottom: 12px;
+    }
+    .products-item .btn-green {
+        max-width: 100%;
+    }
+    .products-item {
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .slogan {
+        max-width: 100%;
+        padding: 0;
+        background: transparent;
+    }
+    .top-wrap {
+        padding: 31px 0 61px 0;
+    }
+    .slogan-desc {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .slogan-title {
+        font-size: 32px;
+        line-height: 110%;
+        margin-bottom: 19px;
+    }
+    .slogan p {
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 19px;
+    }
+    .top-wrap .btn-green {
+        max-width: 100%;
+    }
+    .about {
+        padding: 49px 0 36px 0;
+        .title {
+            font-size: 25px;
+            line-height: 29px;
+            margin-bottom: 16px;
+        }
+    }
+    .about p {
+        max-width: 100%;
+        padding: 0 7px;
+        font-size: 14px;
+        line-height: 150%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .footer-box__bottom .btn-callback {
+        max-width: 100%;
+    }
+    .footer-box__top {
+        padding-bottom: 6px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-box__top .container {
+        align-items: flex-start;
+    }
+    .footer .callback-mob {
+        display: block;
+        right: 16px;
     }
 }

@@ -12,32 +12,7 @@ $(function() {
         }
     });
 
-    ymaps.ready(function() {
-        var myMap = new ymaps.Map('map', {
-                center: [51.709612, 39.152347],
-                zoom: 17,
-                scrollZoom: false,
-                controls: ['zoomControl']
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
 
-            myPlacemark = new ymaps.Placemark([51.709773, 39.154419], {
-                hintContent: 'ООО ГК "АГРО-ЛИДЕР"',
-                balloonContent: 'ООО ГК "АГРО-ЛИДЕР"'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: '../img/gps.svg',
-                iconImageSize: [47, 68],
-                cursor: 'pointer',
-                iconImageOffset: [-20, -70],
-                balloonclose: true
-            });
-        myMap.behaviors.disable('scrollZoom');
-        myMap.geoObjects
-            .add(myPlacemark)
-
-    });
 
     $('.products-btns a').click(function() {
         $('.products-btns').find('.active').removeClass('active');
@@ -80,29 +55,85 @@ $(function() {
 
 
 
+
 });
+
+ymaps.ready(init);
+var myMap;
+
+function init() {
+    myMap = new ymaps.Map('map', {
+            center: [51.709612, 39.152347],
+            zoom: 17,
+            scrollZoom: false,
+            controls: ['zoomControl']
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        myPlacemark = new ymaps.Placemark([51.709773, 39.154419], {
+            hintContent: 'ООО ГК "АГРО-ЛИДЕР"',
+            balloonContent: 'ООО ГК "АГРО-ЛИДЕР"'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/gps.svg',
+            iconImageSize: [47, 68],
+            cursor: 'pointer',
+            iconImageOffset: [-20, -70],
+            balloonclose: true
+        });
+    myMap.behaviors.disable('scrollZoom');
+    myMap.geoObjects
+        .add(myPlacemark)
+
+}
+
+// $(window).on('load', function() {
+//     if ($(window).width() < 746) {
+//         myMap.setCenter([51.709773, 39.154419]);
+//     }
+// });
+
 
 function inputKeyUp() {
     $('.tel').removeClass('error');
 }
 
-$(window).on('load resize scroll', function() {
+$(window).on('load resize', function() {
 
     var width = $(window).width();
 
-    if ((width > '700') && (width < '1000')) {
-
+    if (width < '641') {
+        $('div[data-img-mobile').each(function() {
+            var bgDesc = $(this).attr('style');
+            var bgMob = $(this).attr('data-img-mobile');
+            $(this).attr('style', bgMob);
+        })
     }
 
-    if (width > '700') {
-
+    if (width > '640') {
+        $('div[data-img-desc').each(function() {
+            var bgDataDesc = $(this).attr('data-img-desc');
+            $(this).attr('style', bgDataDesc);
+        })
     }
 
     if (width < '992') {
         $('.mobile-menu').addClass('anim-menu');
     }
+
     if (width > '991') {
         $('.mobile-menu').removeClass('anim-menu');
     }
+
+    if (width < '746') {
+        $('.map-contacts').prependTo($('.map-wrap'));
+
+    }
+
+    if (width > '745') {
+        $('.map-contacts').prependTo($('#map .container'));
+    }
+
 
 });
