@@ -1,12 +1,14 @@
 $(function() {
-    $('#hamburger-icon').click(function() {
+    $('.hamburger-box').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
+            $(this).children('#hamburger-icon').addClass('active');
             $('.mobile-menu').addClass('active');
             $('html').addClass('ov-hidden');
         } else {
             $('.mobile-menu').removeClass('active');
             $('html').removeClass('ov-hidden');
+            $(this).children('#hamburger-icon').removeClass('active');
         }
     });
 
@@ -96,8 +98,11 @@ $(window).on('load resize scroll', function() {
 
     }
 
-    if (width < '700') {
-
+    if (width < '992') {
+        $('.mobile-menu').addClass('anim-menu');
+    }
+    if (width > '991') {
+        $('.mobile-menu').removeClass('anim-menu');
     }
 
 });
