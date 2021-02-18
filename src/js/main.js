@@ -37,7 +37,52 @@ $(function() {
 
     });
 
+    $('.products-btns a').click(function() {
+        $('.products-btns').find('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.products-box').find('.products-box__item').hide();
+        $('#' + $(this).data('switch')).show();
+    });
+
+    $(window).on('load', function() {
+        let phones = [
+            { 'mask': '+7 \\ \\ ###-###-##-##' }
+        ];
+
+        $('input[type=tel]').inputmask({
+            mask: phones,
+            greedy: false,
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+                    cardinality: 1
+                }
+            }
+        });
+    });
+
+    $('.form-callback').submit(function() {
+        var ele = $(".tel").val();
+        var eleLen = $(".tel").val().length;
+        var elem = ele.match(/\_/g).length;
+        console.log(elem);
+        console.log(eleLen);
+
+
+        if (elem !== null) {
+            $(".tel").addClass('error');
+            valid = false;
+            return valid;
+        }
+    });
+
+
+
 });
+
+function inputKeyUp() {
+    $('.tel').removeClass('error');
+}
 
 $(window).on('load resize scroll', function() {
 
