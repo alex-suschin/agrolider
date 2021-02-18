@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Агролидер', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper vn">
+        @@include('components/page/_2_header.html') @@include('components/page/vn-top-wrap.html',{ 'titlevn': 'Зерносушильное оборудование', 'descvn': 'Lorem ipsum dolor sit amet consectetur adipiscing elit', 'imgBg':'product-bg-vn.jpg' })
+
+        <div class="product-card">
+            <div class="container">
+                <div class="product-card-box">
+                    <div class="product-card-box__left">
+                        <div class="product-card-img">
+                            <img src="img/prod-card.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-card-box__right">
+                        <div class="card-title">Universal 20</div>
+                        <div class="card-desc">
+                            <p>Инновационные конвейерные зерносушилки Universal - бережная и эффективная сушка в России. Производительность от 6 до 54 тонн\час. -Идеальная для семеноводческих хозяйств (за счёт бережной сушки). -Максимальный КПД (за счет
+                                системы рекуперации тепла) -Высокий уровень пожаробезопасности (отсутствие заторов при движении зерна на наклонном ложе). -Поточная система и возможность непрерывной сушки (высушит любой урожай, любой влажности). -Увеличенный
+                                загрузочный бункер (3 - 5 тонн) -Ложе из нержавеющей стали (долговечное и безопасное) -Верхний и нижний равномерный нагрев -Система охлаждения зерна (зерно не набирает влагу) -2 вида качественных итальянских горелок (газ,
+                                дизель) Бесплатный шеф&монтаж и обучение персонала.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @@include('components/page/form.html') @@include('components/page/map.html') @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

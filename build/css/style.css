@@ -744,6 +744,56 @@ select {
     cursor: pointer;
     outline: none; }
 
+.product-card {
+  padding: 57px 0 58px 0; }
+
+.product-card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.product-card-box__left {
+  width: 48.781%; }
+
+.product-card-box__right {
+  width: 48.75%; }
+
+.card-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 130%;
+  color: #000000;
+  margin-bottom: 16px; }
+
+.card-desc p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 164%;
+  color: #000000; }
+
+.product-card-img {
+  position: relative;
+  height: 0;
+  padding-bottom: 79.835%; }
+  .product-card-img img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center; }
+
 @media screen and (min-width: 992px) {
   .btn-callback:hover {
     background: #2F943F;
