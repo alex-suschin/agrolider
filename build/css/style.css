@@ -1127,7 +1127,12 @@ select {
     margin-bottom: 0;
     padding-bottom: 0;
     border: none;
-    overflow-x: auto; }
+    overflow-x: auto;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
   .products-btns a {
     margin: 0 5px;
     font-size: 14px;
